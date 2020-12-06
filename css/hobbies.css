@@ -1,0 +1,146 @@
+@font-face{
+    font-family:firstfont;
+    src:url(../Fonts/Poppins-Black.ttf);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: firstfont;
+}
+
+/*NavBar Section*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    background-color: #456268;
+/*    padding: 20px;*/
+}
+
+header .title a{
+    text-decoration: none;
+    color:#fcf8ec;
+    font-size:25px;
+    flex-basis: 25%;
+    padding-left: 20px;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav li{
+    padding: 0;
+    list-style: none;
+}
+
+header nav li a{
+    text-decoration: none;
+    color:#fcf8ec;
+    padding: 20px;
+}
+
+/*
+header nav li a:hover
+,header nav li a.active{
+    color:#456268;
+    background:#fcf8ec;   
+}
+*/
+
+/*End of NavBar*/
+
+@media(max-width:1000px){
+    *{
+        box-sizing: content-box;
+    }
+    header{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    header .title{
+        padding: 10px;    
+    }
+    
+    header .title a{
+/*        margin: 20px;*/
+        flex-basis: 100%;
+    }
+    
+    header nav li a{
+        flex-basis: 100%;
+        padding: 5px;
+        margin:0 5px;
+    }
+    
+    .main  ul{
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+@media(max-width:500px){
+    header{
+        padding-bottom: 20px;
+    }
+    header .title{
+        margin: 0;
+        padding-bottom: 0;
+    }
+    header .title a{
+        font-size: 20px;
+    }
+    header nav li a{
+        padding: 0;
+    }
+}
+
+
+.main{
+    width:100%;
+    height: 90vh;
+    background-color: #79a3b1;
+    color: #fcf8ec;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.main div{
+    flex-basis: 100%;
+    border:5px solid #456268;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.main h2{
+    color:#456268;
+}
+
+.main div ul,li{
+    list-style: none;
+    text-decoration: none;
+    color: #fcf8ec;
+    line-height: 50px;
+}
+
+@media(max-width:500px){
+
+    .main div li{
+        line-height: 30px;
+    }
+    
+    .main div h2{
+        padding: 10px;
+    }
+}
